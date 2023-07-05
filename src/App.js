@@ -5,8 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Lucas Aguero</h1>
         <p>
-          LUCAS AGUERO
+          El cambio que Moreno Necesita
         </p>
       </header>
     </div>
