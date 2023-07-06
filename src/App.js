@@ -1,16 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Home from './views/home';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Lucas Aguero</h1>
-        <p>
-          El cambio que Moreno Necesita
-        </p>
-      </header>
-    </div>
+    <Home/>
   );
 }
 
