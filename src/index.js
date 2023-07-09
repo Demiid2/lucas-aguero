@@ -5,8 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import Home from './views/Home';
 import Nosotros from './views/Nosotros';
-import Eventos from './views/Evento';
+import Eventos from './views/Eventos';
 import Fiscalizacion from './views/Fiscalizacion';
+import Proyecto from './views/Proyecto';
 const router = createBrowserRouter([
   {
     path:'/',
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path:'/Fiscalizacion',
     element: <Fiscalizacion />
+  },
+  {
+    path:'/Proyecto',
+    element: <Proyecto />
   }
 ])
 
