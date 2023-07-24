@@ -1,14 +1,19 @@
 import emailjs from "emailjs-com";
-function Formulario() {
+function Formulario(){
+    const nuevo = "_blank"
     function enviarEmail(e) {
         e.preventDefault();
-
-        emailjs.sendForm('service_gg51d5r', 'template_jjnih3t', e.target, 'u5dE5Hlbi-5gdVan-').then(res => {
-            console.log(res);
-            if(res.text === 'OK'){
-                alert('Se envió tu registro, nos pondremos en contacto lo más pronto posible.')
-            }})
-        }
+        if (document.getElementById('remember').checked) {
+            emailjs.sendForm('service_gg51d5r', 'template_jjnih3t', e.target, 'u5dE5Hlbi-5gdVan-').then(res => {
+                console.log(res);
+                if(res.text === 'OK'){
+                    alert('Se envió tu registro, nos pondremos en contacto lo más pronto posible.')
+                }})
+            }
+        else {
+            alert("Acepta los terminos y condiciones");
+        }}
+      
     return(
     <>
 <form onSubmit={enviarEmail}>
@@ -25,17 +30,17 @@ function Formulario() {
                 <input type="text" name="mail" id="mail"/>
             </div>
             <div className="field">
-                <label for="number">DNI</label>
-                <input type="number" name="descripcion" id="descripcion"/>
+                <label for="dni">DNI</label>
+                <input type="number" name="dni" id="dni"/>
             </div>
             <div className="field">
-                <label for="date">fecha de nacimiento</label>
-                <input type="date" name="descripcion" id="descripcion"/>
+                <label for="fecha">fecha de nacimiento</label>
+                <input type="date" name="fecha" id="fecha"/>
             </div>
             <br />
             <div className="field">
-                <input type="checkbox" name="descripcion" id="descripcion"/>
-                <label for="checkbox">ANOTO mi datos con  pleno  conocimiento y autorizo que  esten en un  banco de datos  para fines de fiscalizacion y se me  envie informacion tema fiscalizacion .</label>
+                <input id="remember" name="remember" type="checkbox"/>
+                <label for="checkbox"  name="confirmacion" id="confirmacion">acepto los <a target={nuevo} href="https://drive.google.com/file/d/1iZ_yYPLaQSAB8WWqfPSJnzeksXIspGly/view?usp=sharing">terminos y condiciones</a></label>
             </div>
 
             <button type="submit" id="button">Envíar formulario</button>

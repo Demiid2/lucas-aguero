@@ -1,11 +1,11 @@
-import lucasaguero from '../images/lucasaguero.jpeg'
-import '../styles/components/Inicio.css'
-import lista from '../images/Lista.jpeg'
+import lucasaguero from '../images/Lucas.jpeg'
 function Inicio() {
     return(
         <>
+        <header className='header'>
+        <h1>En Moreno, es Lucas Agüero</h1>
         <img className='image' src={lucasaguero} alt="lucas aguero"/>
-        <img className='image' src={lista} alt="lista"/>
+        </header>
         </>
     )
 }

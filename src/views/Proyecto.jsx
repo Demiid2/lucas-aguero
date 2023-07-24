@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
+import Navegacion from "../components/Navegacion";
 import Footer from "../components/Footer";
-
+import Proyectos from "../components/Proyectos";
 function Proyecto() {
     return(
     <>
-    <Navbar/>
-    
+    <Navegacion/>
+    <Proyectos/>
     <Footer/>
     </>)
 }
