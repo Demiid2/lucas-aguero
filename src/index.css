@@ -43,7 +43,7 @@ form{
 
 .footer{
   text-align: center;
-  height: 3rem;
+  height: 4rem;
   background: rgb(245,199,43);
   background: linear-gradient(90deg, rgba(245,199,43,1) 0%, rgba(231,89,49,1) 50%, rgba(255,27,103,1) 100%);
   display: flex;
@@ -51,7 +51,7 @@ form{
 }
 .footer a{
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .icon:first-child {
   color: rgb(192, 59, 6);
